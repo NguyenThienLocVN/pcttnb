@@ -44,24 +44,6 @@ const TableSurfaceWater = ({ data }:any) => {
     
   }
 
-  interface Column {
-    id: 'name' | 'code' | 'population' | 'size' | 'density';
-    label: string;
-    minWidth?: number;
-    align?: 'right';
-    children?: Column[];
-    format?: (value: number) => string;
-  }
-  
-  const columns: Column[] = [
-    { id: 'name', label: 'Name', minWidth: 170 },
-    { id: 'code', label: 'Name1', minWidth: 170, children: [
-      { id: 'population', label: 'Name1.1', minWidth: 170 },
-      { id: 'size', label: 'Name1.2', minWidth: 170 },
-    ] },
-    { id: 'density', label: 'Name2', minWidth: 170 },
-  ]
-
   return (
     <Paper>
       <TableContainer>

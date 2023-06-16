@@ -28,7 +28,7 @@ const TableLicenseComponent: FC<TableProps> = ({ columns, data, TypeOfConsId, ac
   function createData(data: any): Data {
     const rowData: Data = {};
   
-    function traverse(obj: any, prefix: string = '') {
+    function traverse(obj: any, prefix = '') {
       for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
           const value = obj[key];
