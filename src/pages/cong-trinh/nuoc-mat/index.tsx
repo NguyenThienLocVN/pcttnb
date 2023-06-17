@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 
 // ** Components Imports
-import ConstructionMap from 'src/views/construction'
+import ConstructionMap from 'src/views/construction/Map'
 import TableList from 'src/views/construction/TableList';
 import CreateConstruction from 'src/views/construction/CreateConstruction';
 import SearchConstruction from 'src/views/construction/Search';

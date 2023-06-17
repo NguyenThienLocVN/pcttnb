@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { EditNote, Delete } from "@mui/icons-material";
 
 // ** Components Imports
-import ConstructionMap from 'src/views/construction'
+import ConstructionMap from 'src/views/construction/Map'
 import CreateConstruction from 'src/views/construction/CreateConstruction';
 import SearchLicense from 'src/views/license/Search';
 import CountLicense from 'src/views/license/CountLicense';

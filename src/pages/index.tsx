@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid'
 // ** Demo Components Imports
 import ConstructionStatus from 'src/views/home/ConstructionStatus'
 import RealTime from 'src/views/home/RealTime'
-import ConstructionMap from 'src/views/construction'
+import ConstructionMap from 'src/views/construction/Map'
 import CountLicense from 'src/views/home/CountLicense'
 import CountLicenseFee from 'src/views/home/CountLicenseFee'
 

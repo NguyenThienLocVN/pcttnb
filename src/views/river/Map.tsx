@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic'
 
-function ConstructionMap() {
+function RiverMap() {
   const Map = dynamic(
-    () => import('src/views/construction/Map'), // replace '@components/map' with your component's location
+    () => import('../../@core/components/map'), // replace '@components/map' with your component's location
     { ssr: false } // This line is important. It's what prevents server-side render
   )
   
   return <Map />
 }
 
-export default ConstructionMap
+export default RiverMap
