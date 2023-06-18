@@ -1,7 +1,6 @@
 // ** MUI Imports
 import Grid from '@mui/material/Grid'
 import React from 'react'
-import { useEffect } from 'react'
 import RiverMap from 'src/views/river/Map'
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 
