@@ -1,10 +1,9 @@
 // ** MUI Imports
-import { Box, Link, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import React from 'react'
 import { useEffect } from 'react'
 import RiverMap from 'src/views/river/Map'
-import { IconButton, Table, TableBody, TableCell, TableHead, TableRow,TableContainer, Paper,TablePagination } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 
 // ** Icons Imports
 function River() {
