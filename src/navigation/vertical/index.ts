@@ -135,6 +135,11 @@ const navigation = (): VerticalNavItemsType => {
       ]
     },
     {
+      title: 'Sông',
+      icon: Information,
+      path: '/song'
+    },
+    {
       title: 'Thông tin - Báo cáo biểu mẫu',
       icon: Information,
       path: '/bao-cao-bieu-mau'
