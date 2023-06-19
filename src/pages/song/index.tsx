@@ -3,22 +3,24 @@ import Grid from '@mui/material/Grid'
 import React from 'react'
 import RiverMap from 'src/views/river/Map'
 import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material';
-import { useMap} from "react-leaflet";
-
-
-const FlyToButton = (lat:any, lng:any) => {
-    // var map = useMap();
-    // map.flyTo([lat, lng], 14, { duration: 2 });
-    console.log(lat, lng);
-}
 
 // ** Icons Imports
-function River() {
+const River = () => {
+
+    const [lat, setLat] = React.useState();
+    const [lng, setLng] = React.useState();
+
+    const FlyToButton = ( lat:any, lng:any ) => {
+        setLat(lat);
+        setLng(lng);
+      };
+    
+
     return (
         <React.Fragment>
             <Grid container spacing={4}>
                 <Grid item xs={12} sx={{ height: '50vh' }}>
-                    <RiverMap />
+                    <RiverMap regionCoord={[lat, lng]} />
                 </Grid>
                 <Grid item xs={12}>
                     <Table className='mainTable'>
@@ -44,7 +46,7 @@ function River() {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'>Sông Định</TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => FlyToButton(14, 105)}>Sông Định</Link></TableCell>
                                 <TableCell size='small'>Hoa Lư, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
