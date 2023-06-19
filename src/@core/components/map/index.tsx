@@ -1,76 +1,34 @@
-import { useRef, useEffect } from "react";
-import { loadModules } from "esri-loader";
+import * as React from "react";
+import { MapContainer, TileLayer} from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import ReactLeafletKml from 'react-leaflet-kml';
 
-const MapPage = () => {
-  const mapRef = useRef(null);
+export default function Map() {
 
-  useEffect(() => {
-    loadModules(["esri/Map", "esri/views/MapView", "esri/Basemap", "esri/layers/KMLLayer", "esri/layers/VectorTileLayer",
-    "esri/layers/TileLayer"], { css: true })
-      .then(([Map, MapView, Basemap, KMLLayer, VectorTileLayer]) => {
-        const layer = new KMLLayer({
-          url:
-            "https://kc08.top/public/files/song.kml"
-        });
+  const [kml, setKml] = React.useState<any | null>(null);
 
-        // const map = new Map({
-        //   basemap: "gray-vector",
-        //   layers: [layer]
-        // });
-
-        
-
-        // var basemapToggle = new BasemapToggle({
-        //   view: view,
-        //   nextBasemap: "streets-vector"
-        // });
-
-        // const featureLayer = new FeatureLayer({
-        //   url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer'
-        // });
-
-        const vectorTileLayer = new VectorTileLayer({
-          portalItem: {
-            id: "72be31d1fa6a42fc895d9a3c0fd8aeef" // World Navigation Map
-          },
-          opacity: .75
-        });
-
-        const basemap = new Basemap({
-          baseLayers: [
-            vectorTileLayer
-          ],
-        });
-
-        const map = new Map({
-          basemap: basemap,
-          layers: [layer]
-        });
-
-        const view = new MapView({
-          container: mapRef.current,
-          map,
-          center: [108.5833, 14.975],
-          zoom: 8
-        });
-
-        // Add the widget to the top-right corner of the view
-        view.ui.add(basemap, {
-          position: "top-right"
-        });
-
-        return () => {
-          if (view) {
-            // destroy the map view when the component is unmounted
-            view.destroy();
-          }
-        };
-      })
-      .catch((err) => {
-        console.error(err);
+  const [map, setMap] = React.useState<any | null>(null);
+  React.useEffect(() => {
+    fetch(
+      "/kml/song_nb.kml"
+    )
+      .then((res) => res.text())
+      .then((kmlText) => {
+        const parser = new DOMParser();
+        const kml = parser.parseFromString(kmlText, "text/xml");
+        setKml(kml);
       });
   }, []);
 
-  return <div style={{ width: "100%", height: "100%" }} ref={mapRef} />;
-};
-export default MapPage;
+  return (
+    <>
+    <MapContainer whenReady={() => setMap} center={[20.246403, 105.967898]} zoom={10} style={{ height: '100%' }}>
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {kml && <ReactLeafletKml kml={kml} />}
+    </MapContainer>
+    </>
+  );
+}

@@ -2,7 +2,15 @@
 import Grid from '@mui/material/Grid'
 import React from 'react'
 import RiverMap from 'src/views/river/Map'
-import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material';
+import { useMap} from "react-leaflet";
+
+
+const FlyToButton = (lat:any, lng:any) => {
+    // var map = useMap();
+    // map.flyTo([lat, lng], 14, { duration: 2 });
+    console.log(lat, lng);
+}
 
 // ** Icons Imports
 function River() {
@@ -27,8 +35,9 @@ function River() {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'>Sông Vệ</TableCell>
-                                <TableCell size='small'>Tư Nghĩa, Quảng Ngãi</TableCell>
+                                {/* <TableCell size='small'>Sông Vệ</TableCell> */}
+                                <TableCell size='small'><Link href='#' onClick={() => FlyToButton(15.023683, 108.662813)}>Sông Chanh</Link></TableCell>
+                                <TableCell size='small'>TP. Ninh Bình, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
                                 <TableCell size='small'>Biển Đông</TableCell>
@@ -36,7 +45,7 @@ function River() {
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
                                 <TableCell size='small'>Sông Định</TableCell>
-                                <TableCell size='small'>Tư Nghĩa, Quảng Ngãi</TableCell>
+                                <TableCell size='small'>Hoa Lư, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
                                 <TableCell size='small'>Biển Đông</TableCell>
@@ -52,7 +61,7 @@ function River() {
                             <TableRow >
                                 <TableCell size='small'>4</TableCell>
                                 <TableCell size='small'>Sông Bin Dần</TableCell>
-                                <TableCell size='small'>Tư Nghĩa, Quảng Ngãi</TableCell>
+                                <TableCell size='small'>Yên Mô, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
                                 <TableCell size='small'>Biển Đông</TableCell>
