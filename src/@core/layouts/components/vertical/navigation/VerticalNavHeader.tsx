@@ -12,9 +12,6 @@ import Typography, { TypographyProps } from '@mui/material/Typography'
 // ** Type Import
 import { Settings } from 'src/@core/context/settingsContext'
 
-// ** Configs
-import themeConfig from 'src/configs/themeConfig'
-
 interface Props {
   hidden: boolean
   settings: Settings
@@ -60,7 +57,7 @@ const VerticalNavHeader = (props: Props) => {
           <StyledLink>
             <img width={50} height={50} src="/images/logos/logo_sotnmt.png" alt="logo" />
             <HeaderTitle variant='h6' style={{fontSize: 18, color: `#fff`}} sx={{ ml: 3 }}>
-              {themeConfig.templateName}
+              SỞ NN & PTNT NINH BÌNH
             </HeaderTitle>
           </StyledLink>
         </Link>

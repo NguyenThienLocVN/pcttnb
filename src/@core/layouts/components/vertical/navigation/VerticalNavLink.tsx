@@ -61,6 +61,7 @@ const MenuNavLink = styled(ListItemButton)< ListItemButtonProps & { component?: 
 const MenuItemTextMetaWrapper = styled(Box)<BoxProps>({
   width: '100%',
   display: 'flex',
+  fontSize: 14,
   alignItems: 'center',
   justifyContent: 'space-between',
   transition: 'opacity .25s ease-in-out',
@@ -117,7 +118,6 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
                   color: `#fff`
                 }}
               >
-                <UserIcon icon={IconTag} />
               </ListItemIcon>
 
               <MenuItemTextMetaWrapper>
@@ -180,7 +180,6 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
                           color: `#fff`
                         }}
                       >
-                        <UserIcon icon={item.icon}/>
                       </ListItemIcon>
         
                       <MenuItemTextMetaWrapper>
@@ -242,7 +241,6 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
               color: `#fff`
             }}
           >
-            <UserIcon icon={IconTag} />
           </ListItemIcon>
 
           <MenuItemTextMetaWrapper>

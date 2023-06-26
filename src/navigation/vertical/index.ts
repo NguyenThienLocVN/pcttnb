@@ -20,302 +20,278 @@ import { VerticalNavItemsType } from 'src/@core/layouts/types'
 const navigation = (): VerticalNavItemsType => {
   return [
     {
-      title: 'Trang chủ',
+      title: 'TRANG CHỦ',
       icon: HomeOutline,
       path: '/'
     },
     {
-      sectionTitle: 'CÔNG TRÌNH CHỐNG LŨ'
+      title: 'CƠ QUAN QUẢN LÝ',
+      // icon: ConstructionIcon,
+      children: [
+        {
+          icon: CircleOutline,
+          title: 'Ban chỉ huy PCTT & TKCN tỉnh',
+          path: '/cong-trinh/de-song',
+        },{
+          icon: CircleOutline,
+          title: 'Ban chỉ huy PCTT & TKCN huyện',
+          path: '/cong-trinh/de-bien',
+        },{
+          icon: CircleOutline,
+          title: 'Chi cục thủy lợi',
+          path: '/cong-trinh/de-boi',
+        },{
+          icon: CircleOutline,
+          title: 'Hạt quản lý đê',
+          path: '/cong-trinh/de-chua-phan-cap',
+        }
+      ]
     },
     {
-      title: 'Đê, kè cống',
+      title: 'CÔNG TRÌNH CHỐNG LŨ',
       icon: ConstructionIcon,
       children: [
         {
           icon: CircleOutline,
-          title: 'Đê sông',
+          title: 'Tiêu chuẩn chống lũ',
           path: '/cong-trinh/de-song',
         },{
           icon: CircleOutline,
-          title: 'Đê biển',
+          title: 'Công trình chống lũ',
           path: '/cong-trinh/de-bien',
         },{
           icon: CircleOutline,
-          title: 'Đê bối',
+          title: 'Công trình phân chậm lũ',
           path: '/cong-trinh/de-boi',
-        },{
-          icon: CircleOutline,
-          title: 'Đê chưa được phân cấp',
-          path: '/cong-trinh/de-chua-phan-cap',
-        },{
-          icon: CircleOutline,
-          title: 'Đê sông nội đồng',
-          path: '/cong-trinh/de-song-noi-dong',
-        },{
-          icon: CircleOutline,
-          title: 'Kè',
-          path: '/cong-trinh/ke',
-        },{
-          icon: CircleOutline,
-          title: 'Cống',
-          path: '/cong-trinh/cong',
         }
       ]
-    },{
-      title: 'Công trình phụ trợ',
-      icon: Factory,
+    },
+    // {
+    //   title: 'Công trình phụ trợ',
+    //   icon: Factory,
+    //   children: [
+    //     {
+    //       icon: CircleOutline,
+    //       title: 'Tuyến đập hồ',
+    //       path: '/cong-trinh/de-song',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Cây chắn sóng',
+    //       path: '/cong-trinh/de-bien',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Đê bối',
+    //       path: '/cong-trinh/de-boi',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Đầm ao ven đê',
+    //       path: '/cong-trinh/de-chua-phan-cap',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Điếm canh đê',
+    //       path: '/cong-trinh/de-song-noi-dong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Cửa khẩu',
+    //       path: '/cong-trinh/ke',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Kho vật tư',
+    //       path: '/cong-trinh/cong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Âu thuyền',
+    //       path: '/cong-trinh/de-chua-phan-cap',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Trạm bơm tưới',
+    //       path: '/cong-trinh/de-song-noi-dong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Trạm bơm tiêu',
+    //       path: '/cong-trinh/ke',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Trạm bơm kết hợp',
+    //       path: '/cong-trinh/cong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Phà',
+    //       path: '/cong-trinh/de-song-noi-dong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Cột thủy trí',
+    //       path: '/cong-trinh/ke',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Biển báo khác',
+    //       path: '/cong-trinh/cong',
+    //     }
+    //   ]
+    // },{
+    //   title: 'Trọng điểm chống lụt, bão',
+    //   icon: TsunamiIcon,
+    //   children: [
+    //     {
+    //       icon: CircleOutline,
+    //       title: 'Kim Sơn',
+    //       path: '/cong-trinh/de-song',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Yên Khánh',
+    //       path: '/cong-trinh/de-bien',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Yên Mô',
+    //       path: '/cong-trinh/de-boi',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Tam Điệp',
+    //       path: '/cong-trinh/de-chua-phan-cap',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Ninh Bình',
+    //       path: '/cong-trinh/de-song-noi-dong',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Hoa Lư',
+    //       path: '/cong-trinh/ke',
+    //     },{
+    //       icon: CircleOutline,
+    //       title: 'Nho Quan',
+    //       path: '/cong-trinh/cong',
+    //     }
+    //   ]
+    // },{
+    //   title: 'Vật tư chống lụt, bão',
+    //   icon: TsunamiIcon,
+    //   path: '/quan-trac/nuoc-mat'
+    // },
+    {
+      title: 'TRẠM QUAN TRẮC',
       children: [
         {
-          icon: CircleOutline,
-          title: 'Tuyến đập hồ',
+          title: 'Trạm khí tượng',
           path: '/cong-trinh/de-song',
-        },{
-          icon: CircleOutline,
-          title: 'Cây chắn sóng',
-          path: '/cong-trinh/de-bien',
-        },{
-          icon: CircleOutline,
-          title: 'Đê bối',
-          path: '/cong-trinh/de-boi',
-        },{
-          icon: CircleOutline,
-          title: 'Đầm ao ven đê',
-          path: '/cong-trinh/de-chua-phan-cap',
-        },{
-          icon: CircleOutline,
-          title: 'Điếm canh đê',
-          path: '/cong-trinh/de-song-noi-dong',
-        },{
-          icon: CircleOutline,
-          title: 'Cửa khẩu',
-          path: '/cong-trinh/ke',
-        },{
-          icon: CircleOutline,
-          title: 'Kho vật tư',
-          path: '/cong-trinh/cong',
-        },{
-          icon: CircleOutline,
-          title: 'Âu thuyền',
-          path: '/cong-trinh/de-chua-phan-cap',
-        },{
-          icon: CircleOutline,
-          title: 'Trạm bơm tưới',
-          path: '/cong-trinh/de-song-noi-dong',
-        },{
-          icon: CircleOutline,
-          title: 'Trạm bơm tiêu',
-          path: '/cong-trinh/ke',
-        },{
-          icon: CircleOutline,
-          title: 'Trạm bơm kết hợp',
-          path: '/cong-trinh/cong',
-        },{
-          icon: CircleOutline,
-          title: 'Phà',
-          path: '/cong-trinh/de-song-noi-dong',
-        },{
-          icon: CircleOutline,
-          title: 'Cột thủy trí',
-          path: '/cong-trinh/ke',
-        },{
-          icon: CircleOutline,
-          title: 'Biển báo khác',
-          path: '/cong-trinh/cong',
-        }
-      ]
-    },{
-      title: 'Trọng điểm chống lụt, bão',
-      icon: TsunamiIcon,
-      children: [
+        },
         {
-          icon: CircleOutline,
-          title: 'Kim Sơn',
+          title: 'Trạm đo mưa',
           path: '/cong-trinh/de-song',
-        },{
-          icon: CircleOutline,
-          title: 'Yên Khánh',
-          path: '/cong-trinh/de-bien',
-        },{
-          icon: CircleOutline,
-          title: 'Yên Mô',
-          path: '/cong-trinh/de-boi',
-        },{
-          icon: CircleOutline,
-          title: 'Tam Điệp',
-          path: '/cong-trinh/de-chua-phan-cap',
-        },{
-          icon: CircleOutline,
-          title: 'Ninh Bình',
-          path: '/cong-trinh/de-song-noi-dong',
-        },{
-          icon: CircleOutline,
-          title: 'Hoa Lư',
-          path: '/cong-trinh/ke',
-        },{
-          icon: CircleOutline,
-          title: 'Nho Quan',
-          path: '/cong-trinh/cong',
-        }
-      ]
-    },{
-      title: 'Vật tư chống lụt, bão',
-      icon: TsunamiIcon,
-      path: '/quan-trac/nuoc-mat'
-    },{
-      sectionTitle: 'CÔNG TRÌNH PHÂN CHẬM LŨ'
-    },{
-      title: 'Tràn lạc khoái',
-      icon: TsunamiIcon,
-      children: [
+        },
         {
-          icon: CircleOutline,
-          title: 'Kim Sơn',
+          title: 'Trạm thủy văn',
+          path: '/cong-trinh/de-song',
+        },
+        {
+          title: 'Quan trắc công trình',
           path: '/cong-trinh/de-song',
         }
       ]
-    },{
-      title: 'Cống Mai Phương - Địch Lộng',
-      icon: TsunamiIcon,
+    },
+    {
+      title: 'DỰ BÁO CẢNH BÁO LŨ',
       children: [
         {
-          icon: CircleOutline,
-          title: 'Kim Sơn',
-          path: '/cong-trinh/de-song',
+          title: 'Lượng mưa dự báo',
+          path: '/quan-trac/nuoc-mat'
+        },
+        {
+          title: 'Mực nước dự báo',
+          path: '/quan-trac/nuoc-mat'
+        }
+      ]
+    },
+    {
+      title: 'BẢN ĐỒ RỦI RO THIÊN TAI',
+      children: [
+        {
+          title: 'Bão, áp thấp nhiệt',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Lũ, ngập lụt',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Mưa lớn',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Hạn hán',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Xâm nhập mặn',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Rét hại',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Nắng nóng',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Sạt lở đất',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Lốc',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Sét',
+          path: '/giay-phep/quan-ly'
+        },{
+          title: 'Mưa đá',
+          path: '/giay-phep/quan-ly'
         }
       ]
     },{
-      sectionTitle: 'TRẠM QUAN TRẮC'
-    },{
-      title: 'Trạm khí tượng',
-      icon: TsunamiIcon,
-      path: '/cong-trinh/de-song',
-    },{
-      title: 'Trạm đo mưa',
-      icon: TsunamiIcon,
-      path: '/cong-trinh/de-song',
-    },{
-      title: 'Trạm thủy văn',
-      icon: TsunamiIcon,
-      path: '/cong-trinh/de-song',
-    },{
-      title: 'Quan trắc công trình',
-      icon: TsunamiIcon,
-      path: '/cong-trinh/de-song',
-    },{
-      sectionTitle: 'DỰ BÁO CẢNH BÁO LŨ'
-    },{
-      title: 'Lượng mưa dự báo',
-      icon: DisplaySettingsIcon,
-      path: '/quan-trac/nuoc-mat'
+      title: 'PHƯƠNG ÁN ĐIỀU HÀNH CHỐNG LŨ',
+      children: [
+        {
+          title: 'Bản đồ dân cư, cơ sở hạ tầng',
+          path: '/A'
+        },
+        {
+          title: 'Bản đồ ngập lụt',
+          path: '/bao-cao-bieu-mau'
+        },
+        {
+          title: 'Thiệt hại do ngập lụt',
+          path: '/tru-luong-nuoc'
+        },
+        {
+          title: 'Phương án vận hành công trình',
+          path: '/tru-luong-nuoc'
+        },
+        {
+          title: 'Phương án sơ tán dân',
+          path: '/tru-luong-nuoc'
+        }
+      ]
     },
     {
-      title: 'Mực nước dự báo',
-      icon: DisplaySettingsIcon,
-      path: '/quan-trac/nuoc-mat'
-    },{
-      sectionTitle: 'BẢN ĐỒ RỦI RO THIÊN TAI'
-    },{
-      title: 'Bão, áp thấp nhiệt đới',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Lũ, ngập lụt',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Mưa lớn',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Hạn hán',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Xâm nhập mặn',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Rét hại',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Nắng nóng',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Sạt lở đất',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Lốc',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Sét',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Mưa đá',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      title: 'Cháy rừng do tự nhiên',
-      icon: NoteText,
-      path: '/giay-phep/quan-ly'
-    },{
-      sectionTitle: 'PHƯƠNG ÁN ĐIỀU HÀNH CHỐNG LŨ'
-    },{
-      title: 'Bản đồ dân cư, cơ sở hạ tầng',
-      icon: Information,
-      path: '/'
-    },
-    {
-      title: 'Bản đồ ngập lụt',
-      icon: Information,
-      path: '/bao-cao-bieu-mau'
-    },
-    {
-      title: 'Thiệt hại do ngập lụt',
-      icon: WaterIcon,
-      path: '/tru-luong-nuoc'
-    },
-    {
-      title: 'Phương án vận hành công trình',
-      icon: WaterIcon,
-      path: '/tru-luong-nuoc'
-    },
-    {
-      title: 'Phương án sơ tán dân',
-      icon: WaterIcon,
-      path: '/tru-luong-nuoc'
-    },{
-      title: 'Sông',
-      icon: WaterIcon,
-      path: '/song'
-    },
-    {
-      title: 'Nội dung khác',
-      icon: More,
-      path: 'noi-dung-khac'
-    },
-    {
-      title: 'Hướng dẫn sử dụng',
+      title: 'HƯỚNG DẪN SỬ DỤNG',
       icon: TagOutline,
       path: 'huong-dan-su-dung'
     },
     {
-      sectionTitle: 'Quản lý'
+      title: 'LIÊN HỆ',
+      icon: TagOutline,
+      path: 'huong-dan-su-dung'
     },
-    {
-      title: 'Tài khoản & Quyền hạn',
-      icon: AccountCogOutline,
-      path: '/quan-ly/tai-khoan-va-quyen-han'
-    },
-    {
-      title: 'Trang truy cập',
-      icon: Tv,
-      path: '/quan-ly/trang-truy-cap'
-    },
+    // {
+    //   title: 'Sông',
+    //   icon: WaterIcon,
+    //   path: '/song'
+    // },
+    // {
+    //   sectionTitle: 'Quản lý'
+    // },
+    // {
+    //   title: 'Tài khoản & Quyền hạn',
+    //   icon: AccountCogOutline,
+    //   path: '/quan-ly/tai-khoan-va-quyen-han'
+    // },
+    // {
+    //   title: 'Trang truy cập',
+    //   icon: Tv,
+    //   path: '/quan-ly/trang-truy-cap'
+    // },
   ]
 }
 

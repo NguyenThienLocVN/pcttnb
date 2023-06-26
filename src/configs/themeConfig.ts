@@ -17,7 +17,7 @@ type ThemeConfig = {
 
 const themeConfig: ThemeConfig = {
   // ** Layout Configs
-  templateName: 'Sở TNMT Ninh Bình' /* App Name */,
+  templateName: 'Điều hành phòng chống thiên tai tỉnh Ninh Bình' /* App Name */,
   mode: 'light' /* light | dark */,
   contentWidth: 'full' /* full | boxed */,
 
