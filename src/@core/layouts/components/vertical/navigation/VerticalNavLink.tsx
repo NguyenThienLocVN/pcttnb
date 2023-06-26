@@ -23,9 +23,6 @@ import themeConfig from 'src/configs/themeConfig'
 import { NavGroup, NavLink } from 'src/@core/layouts/types'
 import { Settings } from 'src/@core/context/settingsContext'
 
-// ** Custom Components Imports
-import UserIcon from 'src/layouts/components/UserIcon'
-
 // ** Utils
 import { handleURLQueries } from 'src/@core/layouts/utils'
 import { List } from '@mui/material'
@@ -72,8 +69,6 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
 
   // ** Hooks
   const router = useRouter()
-
-  const IconTag: ReactNode = item.icon
 
   const [open, setOpen] = useState(false);
 

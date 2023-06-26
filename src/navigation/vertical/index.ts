@@ -1,18 +1,8 @@
 // ** Icon imports
 import HomeOutline from 'mdi-material-ui/HomeOutline'
-import AccountCogOutline from 'mdi-material-ui/AccountCogOutline'
-import Factory from 'mdi-material-ui/Factory';
-import NoteText from 'mdi-material-ui/NoteText';
-import ChartSankey from 'mdi-material-ui/ChartSankey';
-import Information from 'mdi-material-ui/Information';
-import More from 'mdi-material-ui/More';
 import TagOutline from 'mdi-material-ui/TagOutline';
 import CircleOutline from 'mdi-material-ui/CircleOutline';
-import WaterIcon from '@mui/icons-material/Water';
-import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
 import ConstructionIcon from '@mui/icons-material/Construction';
-import TsunamiIcon from '@mui/icons-material/Tsunami';
-import { Tv } from "@mui/icons-material";
 
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
