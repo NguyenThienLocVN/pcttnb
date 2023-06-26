@@ -13,14 +13,15 @@ const River = () => {
     const FlyToButton = ( lat:any, lng:any ) => {
         setLat(lat);
         setLng(lng);
-      };
+    };
     
 
     return (
         <React.Fragment>
             <Grid container spacing={4}>
-                <Grid item xs={12} sx={{ height: '50vh' }}>
+                <Grid item xs={12} sx={{ height: '50vh', width: '100%' }}>
                     <RiverMap regionCoord={[lat, lng]} />
+                    
                 </Grid>
                 <Grid item xs={12}>
                     <Table className='mainTable'>
@@ -38,7 +39,7 @@ const River = () => {
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
                                 {/* <TableCell size='small'>Sông Vệ</TableCell> */}
-                                <TableCell size='small'><Link href='#' onClick={() => FlyToButton(15.023683, 108.662813)}>Sông Chanh</Link></TableCell>
+                                <TableCell size='small'><Link href='#'>Sông Chanh</Link></TableCell>
                                 <TableCell size='small'>TP. Ninh Bình, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
@@ -46,7 +47,7 @@ const River = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => FlyToButton(14, 105)}>Sông Định</Link></TableCell>
+                                <TableCell size='small'><Link href='#'>Sông Định</Link></TableCell>
                                 <TableCell size='small'>Hoa Lư, Ninh Bình</TableCell>
                                 <TableCell size='small'>80 km</TableCell>
                                 <TableCell size='small'>Sông Thoa</TableCell>
