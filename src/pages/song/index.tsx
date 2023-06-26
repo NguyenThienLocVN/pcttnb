@@ -8,13 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/mat
 const River = () => {
 
     const [lat, setLat] = React.useState();
-    const [lng, setLng] = React.useState();
-
-    const FlyToButton = ( lat:any, lng:any ) => {
-        setLat(lat);
-        setLng(lng);
-    };
-    
+    const [lng, setLng] = React.useState();    
 
     return (
         <React.Fragment>

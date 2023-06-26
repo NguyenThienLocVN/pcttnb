@@ -17,7 +17,7 @@ const RealTime = () => {
   }, [currentTime]);
 
   return (
-    <Typography variant='body2'>THỐNG KÊ DỮ LIỆU TÀI NGUYÊN NƯỚC ({formattedTime}) </Typography>
+    <Typography variant='body2' sx={{paddingLeft: '15px'}}>THỐNG KÊ DỮ LIỆU TÀI NGUYÊN NƯỚC ({formattedTime}) </Typography>
   );
 
 };

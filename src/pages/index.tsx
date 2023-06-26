@@ -2,11 +2,11 @@
 import Grid from '@mui/material/Grid'
 
 // ** Demo Components Imports
-import ConstructionStatus from 'src/views/home/ConstructionStatus'
 import RealTime from 'src/views/home/RealTime'
 import ConstructionMap from 'src/views/construction/Map'
-import CountLicense from 'src/views/home/CountLicense'
 import CountLicenseFee from 'src/views/home/CountLicenseFee'
+import RainingData from 'src/views/home/RainingData'
+import WaterData from 'src/views/home/WaterData'
 
 const Dashboard = () => {
   return (
@@ -16,10 +16,10 @@ const Dashboard = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <Grid item xs={12} md={12}>
-            <ConstructionStatus />
+            <RainingData />
           </Grid>
           <Grid item xs={12} md={12} sx={{marginTop: 5}}>
-            <CountLicense />
+            <WaterData />
           </Grid>
           <Grid item xs={12} md={12} sx={{marginTop: 5}}>
             <CountLicenseFee />

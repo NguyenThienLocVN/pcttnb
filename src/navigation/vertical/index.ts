@@ -16,7 +16,6 @@ const navigation = (): VerticalNavItemsType => {
     },
     {
       title: 'CƠ QUAN QUẢN LÝ',
-      // icon: ConstructionIcon,
       children: [
         {
           icon: CircleOutline,
@@ -56,107 +55,6 @@ const navigation = (): VerticalNavItemsType => {
         }
       ]
     },
-    // {
-    //   title: 'Công trình phụ trợ',
-    //   icon: Factory,
-    //   children: [
-    //     {
-    //       icon: CircleOutline,
-    //       title: 'Tuyến đập hồ',
-    //       path: '/cong-trinh/de-song',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Cây chắn sóng',
-    //       path: '/cong-trinh/de-bien',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Đê bối',
-    //       path: '/cong-trinh/de-boi',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Đầm ao ven đê',
-    //       path: '/cong-trinh/de-chua-phan-cap',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Điếm canh đê',
-    //       path: '/cong-trinh/de-song-noi-dong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Cửa khẩu',
-    //       path: '/cong-trinh/ke',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Kho vật tư',
-    //       path: '/cong-trinh/cong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Âu thuyền',
-    //       path: '/cong-trinh/de-chua-phan-cap',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Trạm bơm tưới',
-    //       path: '/cong-trinh/de-song-noi-dong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Trạm bơm tiêu',
-    //       path: '/cong-trinh/ke',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Trạm bơm kết hợp',
-    //       path: '/cong-trinh/cong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Phà',
-    //       path: '/cong-trinh/de-song-noi-dong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Cột thủy trí',
-    //       path: '/cong-trinh/ke',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Biển báo khác',
-    //       path: '/cong-trinh/cong',
-    //     }
-    //   ]
-    // },{
-    //   title: 'Trọng điểm chống lụt, bão',
-    //   icon: TsunamiIcon,
-    //   children: [
-    //     {
-    //       icon: CircleOutline,
-    //       title: 'Kim Sơn',
-    //       path: '/cong-trinh/de-song',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Yên Khánh',
-    //       path: '/cong-trinh/de-bien',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Yên Mô',
-    //       path: '/cong-trinh/de-boi',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Tam Điệp',
-    //       path: '/cong-trinh/de-chua-phan-cap',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Ninh Bình',
-    //       path: '/cong-trinh/de-song-noi-dong',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Hoa Lư',
-    //       path: '/cong-trinh/ke',
-    //     },{
-    //       icon: CircleOutline,
-    //       title: 'Nho Quan',
-    //       path: '/cong-trinh/cong',
-    //     }
-    //   ]
-    // },{
-    //   title: 'Vật tư chống lụt, bão',
-    //   icon: TsunamiIcon,
-    //   path: '/quan-trac/nuoc-mat'
-    // },
     {
       title: 'TRẠM QUAN TRẮC',
       children: [
@@ -263,25 +161,7 @@ const navigation = (): VerticalNavItemsType => {
       title: 'LIÊN HỆ',
       icon: TagOutline,
       path: 'huong-dan-su-dung'
-    },
-    // {
-    //   title: 'Sông',
-    //   icon: WaterIcon,
-    //   path: '/song'
-    // },
-    // {
-    //   sectionTitle: 'Quản lý'
-    // },
-    // {
-    //   title: 'Tài khoản & Quyền hạn',
-    //   icon: AccountCogOutline,
-    //   path: '/quan-ly/tai-khoan-va-quyen-han'
-    // },
-    // {
-    //   title: 'Trang truy cập',
-    //   icon: Tv,
-    //   path: '/quan-ly/trang-truy-cap'
-    // },
+    }
   ]
 }
 
