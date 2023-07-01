@@ -26,6 +26,7 @@ export default function Map() {
   }, []);
 
   const bing_key = "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L"
+  
   return (
     <>
     <MapContainer whenReady={() => setMap} center={[20.246403, 105.967898]} zoom={9} style={{ height: '100%' }}>

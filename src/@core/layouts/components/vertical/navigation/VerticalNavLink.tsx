@@ -1,5 +1,5 @@
 // ** React Imports
-import { ElementType, ReactNode, useState } from 'react'
+import { ElementType, useState } from 'react'
 
 // ** Next Imports
 import Link from 'next/link'
