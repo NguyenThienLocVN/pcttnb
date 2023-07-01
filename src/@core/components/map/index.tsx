@@ -4,13 +4,13 @@ import 'leaflet/dist/leaflet.css';
 import ReactLeafletKml from 'react-leaflet-kml';
 import { BingLayer } from '../bingmap';
 
-const { BaseLayer, Overlay } = LayersControl;
+const { BaseLayer } = LayersControl;
 
 export default function Map() {
 
   const [kml, setKml] = React.useState<any | null>(null);
 
-  const [map, setMap] = React.useState<any | null>(null);
+  const [, setMap] = React.useState<any | null>(null);
   
   React.useEffect(() => {
 
