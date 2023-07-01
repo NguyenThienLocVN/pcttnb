@@ -1,7 +1,6 @@
 // ** MUI Imports
 import Grid from '@mui/material/Grid'
 import React from 'react'
-import RiverMap from 'src/views/river/Map'
 import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material';
 
 // ** Icons Imports
@@ -10,7 +9,6 @@ const River = () => {
         <React.Fragment>
             <Grid container spacing={4}>
                 <Grid item xs={12} sx={{ height: '50vh', width: '100%' }}>
-                    <RiverMap />
                 </Grid>
                 <Grid item xs={12}>
                     <Table className='mainTable'>
