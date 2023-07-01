@@ -69,8 +69,6 @@ const VerticalNavLink = ({ item, settings, navVisible, toggleNavVisibility }: Pr
   // ** Hooks
   const router = useRouter()
 
-  const IconTag: ReactNode = item.icon
-
   const [open, setOpen] = useState(false)
 
   const handleClick = () => {

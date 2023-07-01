@@ -6,16 +6,11 @@ import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/mat
 
 // ** Icons Imports
 const River = () => {
-
-    const [lat, setLat] = React.useState();
-    const [lng, setLng] = React.useState();    
-
     return (
         <React.Fragment>
             <Grid container spacing={4}>
                 <Grid item xs={12} sx={{ height: '50vh', width: '100%' }}>
-                    <RiverMap regionCoord={[lat, lng]} />
-                    
+                    <RiverMap />
                 </Grid>
                 <Grid item xs={12}>
                     <Table className='mainTable'>

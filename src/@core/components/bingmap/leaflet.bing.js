@@ -25,6 +25,7 @@ L.BingLayer = L.TileLayer.extend({
 			if ((y & mask) !== 0) digit += 2;
 			quad = quad + digit;
 		}
+
 		return quad;
 	},
 
@@ -32,6 +33,7 @@ L.BingLayer = L.TileLayer.extend({
 		var zoom = this._getZoomForUrl();
 		var subdomains = this.options.subdomains,
 			s = this.options.subdomains[Math.abs((tilePoint.x + tilePoint.y) % subdomains.length)];
+
 		return this._url.replace('{subdomain}', s)
 				.replace('{quadkey}', this.tile2quad(tilePoint.x, tilePoint.y, zoom))
 				.replace('{culture}', this.options.culture);
@@ -48,6 +50,7 @@ L.BingLayer = L.TileLayer.extend({
 			e.parentNode.removeChild(e);
 			if (meta.errorDetails) {
 				console.log(meta.errorDetails);
+				
 				return;
 			}
 			_this.initMetadata(meta);

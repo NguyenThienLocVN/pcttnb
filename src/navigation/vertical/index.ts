@@ -1,9 +1,3 @@
-// ** Icon imports
-import HomeOutline from 'mdi-material-ui/HomeOutline'
-import TagOutline from 'mdi-material-ui/TagOutline';
-import CircleOutline from 'mdi-material-ui/CircleOutline';
-import ConstructionIcon from '@mui/icons-material/Construction';
-
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
 

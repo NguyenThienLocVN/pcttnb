@@ -30,16 +30,13 @@ export default function Map() {
     <>
     <MapContainer whenReady={() => setMap} center={[20.246403, 105.967898]} zoom={9} style={{ height: '100%' }}>
       <LayersControl position='topright'>
-        <BaseLayer name='OpenStreetMap.Mapnik'>
+        <BaseLayer name='Bản đồ hành chính'>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         </BaseLayer>
-        <BaseLayer checked name='Bing Maps Roads'>
+        <BaseLayer checked name='Bản đồ đường'>
           <BingLayer  bingkey={bing_key} type="Road"/>
         </BaseLayer>
-        <BaseLayer name='Bing Maps Satelite'>
-          <BingLayer  bingkey={bing_key} />
-        </BaseLayer>
-        <BaseLayer name='Bing Maps Satelite with Labels'>
+        <BaseLayer name='Bản đồ vệ tinh'>
           <BingLayer  bingkey={bing_key} type="AerialWithLabels" />
         </BaseLayer>
       </LayersControl>
