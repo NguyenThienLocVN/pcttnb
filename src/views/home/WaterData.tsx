@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 
 // ** MUI Imports
-import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,7 +27,7 @@ const WaterData = () => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardHeader
-        title='SỐ LIỆU MƯA'
+        title='SỐ LIỆU MỰC NƯỚC'
         sx={{ padding: 0 }}
         titleTypographyProps={{
           sx: {
@@ -38,33 +41,75 @@ const WaterData = () => {
           }
         }}
       />
-      <CardContent>
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={4} md={6}>
-              <Typography>Trạm A</Typography>
-            </Grid>
-            <Grid item xs={4} md={4}>
-              <Button variant="contained" color="primary" size="medium">3.6</Button>
-            </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid item xs={4} md={6}>
-              <Typography>Trạm A</Typography>
-            </Grid>
-            <Grid item xs={4} md={4}>
-              <Button variant="contained" color="primary" size="medium">3.6</Button>
-            </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid item xs={4} md={6}>
-              <Typography>Trạm A</Typography>
-            </Grid>
-            <Grid item xs={4} md={4}>
-              <Button variant="contained" color="primary" size="medium">3.6</Button>
-            </Grid>
-          </Grid>
-      </Box>
+      <CardContent sx={{padding: '10px !important'}}>
+        <TableContainer className="waterdata-table" component={Paper}>
+          <Table aria-label="customized table">
+            <TableHead>
+                <TableRow sx={{background: '#a8d2ff', height: 35}}>
+                  <TableCell padding="none"></TableCell>
+                  <TableCell padding="none" align="center">Hiện tại</TableCell>
+                  <TableCell padding="none" align="center">1 ngày</TableCell>
+                  <TableCell padding="none" align="center">3 ngày</TableCell>
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                <TableRow sx={{background: '#ededed', height: 75}}>
+                  <TableCell padding="none">
+                    <Typography sx={{fontWeight: 'bold', fontSize: '16px !important', color: '#1565C0'}}>Trạm A</Typography>
+                    <Typography sx={{fontSize: '13px !important'}}>Huyện Yên Mô, Ninh Bình</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-now">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-1d">
+                      <Typography>3.6</Typography>
+                      <Typography>(mm)</Typography>
+                    </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-3d">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                </TableRow>
+                <TableRow sx={{background: '#ededed', height: 75}}>
+                  <TableCell padding="none">
+                    <Typography sx={{fontWeight: 'bold', fontSize: '16px !important', color: '#1565C0'}}>Trạm A</Typography>
+                    <Typography sx={{fontSize: '13px !important'}}>Huyện Yên Mô, Ninh Bình</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-now">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-1d">
+                      <Typography>3.6</Typography>
+                      <Typography>(mm)</Typography>
+                    </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-3d">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                </TableRow>
+                <TableRow sx={{background: '#ededed', height: 75}}>
+                  <TableCell padding="none">
+                    <Typography sx={{fontWeight: 'bold', fontSize: '16px !important', color: '#1565C0'}}>Trạm A</Typography>
+                    <Typography sx={{fontSize: '13px !important'}}>Huyện Yên Mô, Ninh Bình</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-now">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-1d">
+                      <Typography>3.6</Typography>
+                      <Typography>(mm)</Typography>
+                    </TableCell>
+                  <TableCell padding="none" align="center" className="waterdata-cell data-3d">
+                    <Typography>3.6</Typography>
+                    <Typography>(mm)</Typography>
+                  </TableCell>
+                </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
       </CardContent>
     </Card>
   );

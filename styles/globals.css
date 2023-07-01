@@ -238,3 +238,28 @@ code[class*='language-'] {
   right: 0;
   position: absolute;
 }
+
+.raindata-table .data-now {
+  background: #035291;
+}
+
+.raindata-table p { font-size: 14px; }
+
+.raindata-table .data-now p { color: #fff !important; }
+.raindata-table .raindata-cell { width: 75px; }
+.raindata-table .raindata-cell .data-unit {
+  font-style: italic;
+  font-size: 12px;
+}
+.raindata-table .raindata-cell .data-value {
+  font-weight: bold;
+  font-size: 16px;
+}
+.raindata-table th, .raindata-table td { border: 1px solid #fff; }
+.raindata-table .data-1d, .raindata-table .data-3d {
+  border: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+  padding: 6px !important;
+}

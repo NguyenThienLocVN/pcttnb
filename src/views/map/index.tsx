@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-function ConstructionMap() {
+function CommonMap() {
   const Map = dynamic(
     () => import('../../@core/components/map'), // replace '@components/map' with your component's location
     { ssr: false } // This line is important. It's what prevents server-side render
@@ -9,4 +9,4 @@ function ConstructionMap() {
   return <Map />
 }
 
-export default ConstructionMap
+export default CommonMap
