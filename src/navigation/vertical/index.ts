@@ -30,7 +30,7 @@ const navigation = (): VerticalNavItemsType => {
       children: [
         {
           title: 'Tiêu chuẩn chống lũ',
-          path: '/cong-trinh/de-song',
+          path: '/tieu-chuan-chong-lu',
         },{
           title: 'Công trình chống lũ',
           children: [
@@ -38,20 +38,8 @@ const navigation = (): VerticalNavItemsType => {
               title: 'Đê, kè cống',
               children: [
                 {
-                  title: 'Đê sông',
-                  path: '/cong-trinh/de-song',
-                },{
-                  title: 'Đê biển',
-                  path: '/cong-trinh/de-bien',
-                },{
-                  title: 'Đê bối',
-                  path: '/cong-trinh/de-boi',
-                },{
-                  title: 'Đê chưa được phân cấp',
-                  path: '/cong-trinh/de-chua-phan-cap',
-                },{
-                  title: 'Đê sông nội đồng',
-                  path: '/cong-trinh/de-song-noi-dong',
+                  title: 'Đê',
+                  path: '/cong-trinh/de',
                 },{
                   title: 'Kè',
                   path: '/cong-trinh/ke',
