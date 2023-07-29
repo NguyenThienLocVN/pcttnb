@@ -263,3 +263,4 @@ code[class*='language-'] {
   position: relative;
   padding: 6px !important;
 }
+.d-flex { display: flex !important; }

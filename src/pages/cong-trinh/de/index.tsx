@@ -1,11 +1,18 @@
 // ** MUI Imports
 import Grid from '@mui/material/Grid'
 import React from 'react'
-import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material';
-import Map from 'src/views/map'
+import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import("../../../@core/components/map"), { ssr: false });
+
+const handleMapClick = (e:any) => {
+    // console.log(useMap);
+    // Perform any desired action with the clicked coordinates
+};
 
 // ** Icons Imports
-const River = () => {
+const DikeConstructions = () => {
     return (
         <React.Fragment>
             <Grid container spacing={4}>
@@ -31,7 +38,7 @@ const River = () => {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'><Link href='#'>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={handleMapClick}>Hữu sông Đáy</Link></TableCell>
                                 <TableCell size='small'>8380</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -43,27 +50,39 @@ const River = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#'>Sông Định</Link></TableCell>
-                                <TableCell size='small'>Hoa Lư, Ninh Bình</TableCell>
-                                <TableCell size='small'>80 km</TableCell>
-                                <TableCell size='small'>Sông Thoa</TableCell>
-                                <TableCell size='small'>Biển Đông</TableCell>
+                                <TableCell size='small'><Link href='#'>Hữu Hoàng Long</Link></TableCell>
+                                <TableCell size='small'>10050</TableCell>
+                                <TableCell size='small'>4</TableCell>
+                                <TableCell size='small'>Đê sông</TableCell>
+                                <TableCell size='small'>Huyện Nho Quan</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>-</TableCell>
+                                <TableCell size='small'>-</TableCell>
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>3</TableCell>
-                                <TableCell size='small'>Sông Trà Bồng</TableCell>
-                                <TableCell size='small'>Trà Bồng, Quảng Ngãi</TableCell>
-                                <TableCell size='small'>45 km</TableCell>
-                                <TableCell size='small'>Sông Thoa</TableCell>
-                                <TableCell size='small'>Biển Đông</TableCell>
+                                <TableCell size='small'><Link href='#'>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'>7122</TableCell>
+                                <TableCell size='small'>3</TableCell>
+                                <TableCell size='small'>Đê sông</TableCell>
+                                <TableCell size='small'>TP. Ninh Bình</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>Xã Ninh Khánh</TableCell>
+                                <TableCell size='small'>Xã Ninh Phúc</TableCell>
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>4</TableCell>
-                                <TableCell size='small'>Sông Bin Dần</TableCell>
-                                <TableCell size='small'>Yên Mô, Ninh Bình</TableCell>
-                                <TableCell size='small'>80 km</TableCell>
-                                <TableCell size='small'>Sông Thoa</TableCell>
-                                <TableCell size='small'>Biển Đông</TableCell>
+                                <TableCell size='small'><Link href='#'>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'>13765</TableCell>
+                                <TableCell size='small'>3</TableCell>
+                                <TableCell size='small'>Đê sông</TableCell>
+                                <TableCell size='small'>Huyện Kim Sơn</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>0.0</TableCell>
+                                <TableCell size='small'>Xã Xuân Thiện</TableCell>
+                                <TableCell size='small'>Xã Kim Tân</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
@@ -73,4 +92,4 @@ const River = () => {
     )
 }
 
-export default River
+export default DikeConstructions
