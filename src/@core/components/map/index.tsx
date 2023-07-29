@@ -87,11 +87,9 @@ const FlyToButton = ({ position }:{ position:any }) => {
 
 export default function Map() {
 
-  const [map, setMap] = React.useState<any | null>(null);
+  const [, setMap] = React.useState<any | null>(null);
 
   const bing_key = "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L"
-
-  const [mapCenter, setMapCenter] = React.useState({ lat: 20.246403, lng: 105.967898 });
 
 
   return (

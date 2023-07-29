@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 
 const Map = dynamic(() => import("../../../@core/components/map"), { ssr: false });
 
-const handleMapClick = (e:any) => {
+const handleMapClick = () => {
     // console.log(useMap);
     // Perform any desired action with the clicked coordinates
 };
