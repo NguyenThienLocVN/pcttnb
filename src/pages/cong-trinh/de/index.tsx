@@ -13,7 +13,7 @@ const DikeConstructions = () => {
     
     const zoomConstruction = (coords:any) => {
         setMapCenter(coords);
-        setMapZoom(11);
+        setMapZoom(12);
     };
 
     return (
@@ -41,7 +41,7 @@ const DikeConstructions = () => {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.363713, 105.918076])}>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.363713, 105.918076])}>Đầm Cút</Link></TableCell>
                                 <TableCell size='small'>8380</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -53,7 +53,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.39729, 105.816374])}>Hữu Hoàng Long</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.33791822727243, 105.812477149027])}>Tả Hoàng Long</Link></TableCell>
                                 <TableCell size='small'>10050</TableCell>
                                 <TableCell size='small'>4</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -65,7 +65,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>3</TableCell>
-                                <TableCell size='small'><Link href='#'>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.36147235166413, 105.9234089034539])}>Hữu sông Đáy</Link></TableCell>
                                 <TableCell size='small'>7122</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
