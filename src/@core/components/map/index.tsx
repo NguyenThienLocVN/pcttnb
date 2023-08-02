@@ -71,30 +71,13 @@ const MyData = () => {
   }
 };
 
-const FlyToButton = ({ position }:{ position:any }) => {
-  const map = useMap();
-
-  const handleClick = () => {
-    map.flyTo(position, map.getZoom());
-  };
-
-  return (
-    <button onClick={handleClick}>
-      Fly to {position[0]}, {position[1]}
-    </button>
-  );
-};
-
-export default function Map() {
-
-  const [, setMap] = React.useState<any | null>(null);
+export default function Map({center, zoom} : {center:any, zoom:any}) {
 
   const bing_key = "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L"
 
-
   return (
     <>
-    <MapContainer attributionControl={false} whenReady={() => setMap} center={[20.246403, 105.967898]} zoom={9} style={{ height: '100%' }}>
+    <MapContainer attributionControl={false} center={center} zoom={zoom} style={{ height: '100%' }}>
       <LayersControl position='topright'>
         <BaseLayer name='Bản đồ hành chính'>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
@@ -107,11 +90,8 @@ export default function Map() {
         </BaseLayer>
       </LayersControl>
       <MyData />
-      <FlyToButton position={[20.363713, 105.918076]} />
     </MapContainer>
     
     </>
   );
-
-  
 }

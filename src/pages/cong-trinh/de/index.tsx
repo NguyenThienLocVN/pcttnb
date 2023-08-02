@@ -1,23 +1,29 @@
 // ** MUI Imports
 import Grid from '@mui/material/Grid'
-import React from 'react'
+import React, { useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material'
 import dynamic from 'next/dynamic'
+import { useMap } from "react-leaflet";
 
 const Map = dynamic(() => import("../../../@core/components/map"), { ssr: false });
 
-const handleMapClick = () => {
-    // console.log(useMap);
-    // Perform any desired action with the clicked coordinates
-};
 
-// ** Icons Imports
+
 const DikeConstructions = () => {
+    const [mapCenter, setMapCenter] = useState({ lat: 20.246403, lng: 105.967898 });
+    const [mapZoom, setMapZoom] = useState(9);
+
+    
+    const zoomConstruction = (lat:any, lng:any) => {
+        setMapCenter({lat, lng});
+        setMapZoom(11);
+    };
+
     return (
         <React.Fragment>
             <Grid container spacing={4}>
                 <Grid item xs={12} sx={{ height: '50vh', width: '100%' }}>
-                    <Map />
+                    <Map center={mapCenter} zoom={mapZoom} />
                 </Grid>
                 <Grid item xs={12}>
                     <Table className='mainTable'>
@@ -38,7 +44,7 @@ const DikeConstructions = () => {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={handleMapClick}>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={(e) => zoomConstruction(20.363713, 105.918076)}>Hữu sông Đáy</Link></TableCell>
                                 <TableCell size='small'>8380</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -50,7 +56,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#'>Hữu Hoàng Long</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction(20.39729, 105.816374)}>Hữu Hoàng Long</Link></TableCell>
                                 <TableCell size='small'>10050</TableCell>
                                 <TableCell size='small'>4</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
