@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, LayersControl, GeoJSON, useMap} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { BingLayer } from '../bingmap';
@@ -17,7 +17,7 @@ function style() {
 
 const MyData = () => {
   // create state variable to hold data when it is fetched
-  const [data, setData] = React.useState<any | null>(null);
+  const [data, setData] = useState<any | null>(null);
 
   // useEffect to fetch data on mount
   React.useEffect(() => {
@@ -71,7 +71,14 @@ const MyData = () => {
   }
 };
 
-export default function Map({center, zoom} : {center:any, zoom:any}) {
+function SetViewOnClick({ coords, zoom } : any) {
+  	const map = useMap();
+  	map.setView(coords, zoom);
+
+  	return null;
+}
+
+export default function Map({center, zoom} : any) {
 
   const bing_key = "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L"
 
@@ -90,8 +97,8 @@ export default function Map({center, zoom} : {center:any, zoom:any}) {
         </BaseLayer>
       </LayersControl>
       <MyData />
+	  <SetViewOnClick coords={center} zoom={zoom} />
     </MapContainer>
-    
     </>
   );
 }

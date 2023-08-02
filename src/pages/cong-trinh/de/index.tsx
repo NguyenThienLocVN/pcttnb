@@ -2,20 +2,17 @@
 import Grid from '@mui/material/Grid'
 import React, { useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableRow, Link } from '@mui/material'
-import dynamic from 'next/dynamic'
-import { useMap } from "react-leaflet";
+import dynamic from 'next/dynamic';
 
 const Map = dynamic(() => import("../../../@core/components/map"), { ssr: false });
 
-
-
 const DikeConstructions = () => {
-    const [mapCenter, setMapCenter] = useState({ lat: 20.246403, lng: 105.967898 });
+    const [mapCenter, setMapCenter] = useState([ 20.246403, 105.967898 ]);
     const [mapZoom, setMapZoom] = useState(9);
 
     
-    const zoomConstruction = (lat:any, lng:any) => {
-        setMapCenter({lat, lng});
+    const zoomConstruction = (coords:any) => {
+        setMapCenter(coords);
         setMapZoom(11);
     };
 
@@ -44,7 +41,7 @@ const DikeConstructions = () => {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={(e) => zoomConstruction(20.363713, 105.918076)}>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.363713, 105.918076])}>Hữu sông Đáy</Link></TableCell>
                                 <TableCell size='small'>8380</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -56,7 +53,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction(20.39729, 105.816374)}>Hữu Hoàng Long</Link></TableCell>
+                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.39729, 105.816374])}>Hữu Hoàng Long</Link></TableCell>
                                 <TableCell size='small'>10050</TableCell>
                                 <TableCell size='small'>4</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
