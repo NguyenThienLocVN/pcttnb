@@ -7,7 +7,7 @@ import { GeoJSON } from 'react-leaflet';
 const { BaseLayer } = LayersControl;
 
 const SetViewOnClick = ({ coords, zoom }: any) => {
-	const map = useMap();console.log(map._layers);
+	const map = useMap();
 	map.flyTo(coords, zoom, {
 		duration: 1
 	});
