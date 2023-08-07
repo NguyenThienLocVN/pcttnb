@@ -264,3 +264,7 @@ code[class*='language-'] {
   padding: 6px !important;
 }
 .d-flex { display: flex !important; }
+
+.line-active {
+  stroke: red;
+}

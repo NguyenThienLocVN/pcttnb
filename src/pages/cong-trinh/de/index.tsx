@@ -11,10 +11,18 @@ const DikeConstructions = () => {
     const [mapZoom, setMapZoom] = useState(9);
 
     const [mapData, setMapData] = useState<any | null>(null);
+
+    const [active, setActive] = useState(null);
     
-    const zoomConstruction = (coords:any) => {
+    const zoomConstruction = (coords:any, e:any) => {
         setMapCenter(coords);
         setMapZoom(13);
+        console.log(active);
+
+        setActive(e.target.id);
+
+        const ele = document.querySelector('.'+e.target.id);
+        ele?.setAttribute("class", `line-layer ${e.target.id} leaflet-interactive line-active`);
     };
 
     React.useEffect(() => { 
@@ -69,7 +77,7 @@ const DikeConstructions = () => {
                         <TableBody>
                             <TableRow >
                                 <TableCell size='small'>1</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.363713, 105.918076])}>Đầm Cút</Link></TableCell>
+                                <TableCell size='small'><Link href='#' id='dam-cut-1' onClick={(e) => zoomConstruction([20.363713, 105.918076], e)}>Đầm Cút</Link></TableCell>
                                 <TableCell size='small'>8380</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -81,7 +89,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>2</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.33791822727243, 105.812477149027])}>Tả Hoàng Long</Link></TableCell>
+                                <TableCell size='small'><Link href='#' id="ta-hoang-long-2" onClick={(e) => zoomConstruction([20.33791822727243, 105.812477149027], e)}>Tả Hoàng Long</Link></TableCell>
                                 <TableCell size='small'>10050</TableCell>
                                 <TableCell size='small'>4</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
@@ -93,7 +101,7 @@ const DikeConstructions = () => {
                             </TableRow>
                             <TableRow >
                                 <TableCell size='small'>3</TableCell>
-                                <TableCell size='small'><Link href='#' onClick={() => zoomConstruction([20.36147235166413, 105.9234089034539])}>Hữu sông Đáy</Link></TableCell>
+                                <TableCell size='small'><Link href='#' id="hau-song-day-3" onClick={(e) => zoomConstruction([20.36147235166413, 105.9234089034539], e)}>Hữu sông Đáy</Link></TableCell>
                                 <TableCell size='small'>7122</TableCell>
                                 <TableCell size='small'>3</TableCell>
                                 <TableCell size='small'>Đê sông</TableCell>
